@@ -1,13 +1,13 @@
 'use client';
 
+import { AppConfigProps, LayoutConfig, LayoutState } from '@/types';
 import { PrimeReactContext } from 'primereact/api';
 import { Button } from 'primereact/button';
 import { InputSwitch, InputSwitchChangeEvent } from 'primereact/inputswitch';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Sidebar } from 'primereact/sidebar';
 import { classNames } from 'primereact/utils';
-import React, { useContext, useEffect, useState } from 'react';
-import { AppConfigProps, LayoutConfig, LayoutState } from '@/types';
+import { useContext, useEffect, useState } from 'react';
 import { LayoutContext } from './context/layoutcontext';
 
 const AppConfig = (props: AppConfigProps) => {
@@ -169,6 +169,14 @@ const AppConfig = (props: AppConfigProps) => {
                             <img src="/layout/images/themes/viva-dark.svg" className="w-2rem h-2rem" alt="Viva Dark" />
                         </button>
                     </div>
+
+                    <div className="col-3">
+                        <button className="p-link w-2rem h-2rem" onClick={() => _changeTheme('kemoms-light', 'light')}>
+                            <img src="/layout/images/themes/kemoms.svg" className="w-2rem h-2rem" alt="Kemoms Light" />
+                        </button>
+                    </div>
+
+
                 </div>
 
                 <h5>Bootstrap</h5>
